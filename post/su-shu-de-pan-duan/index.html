@@ -1,102 +1,92 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>素数的判断 | Gridea</title>
-<link rel="shortcut icon" href="https://BTli-Frozen.github.io/favicon.ico?v=1603001849118">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+    
+<meta charset="utf-8" >
+
+<title>素数的判断 | BT狸的个人博客</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://BTli-Frozen.github.io/favicon.ico?v=1603002096200">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://BTli-Frozen.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="素数的判断 | Gridea - Atom Feed" href="https://BTli-Frozen.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="素数的常用判断
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-0. 超级普通法
-只是利用了素数的定义
-时间复杂度O(N)O(N)O(N)
-bool Prime0(int x)
-{
-    if(x==1) return 0;//排除特殊
-    if(x==2||x==3) retu..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://BTli-Frozen.github.io">
-  <img class="avatar" src="https://BTli-Frozen.github.io/images/avatar.png?v=1603001849118" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://BTli-Frozen.github.io">
+        <img class="avatar" src="https://BTli-Frozen.github.io/images/avatar.png?v=1603002096200" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://BTli-Frozen.github.io">
+        <h1 class="site-title">BT狸的个人博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              素数的判断
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-10-18
-              </span>
-              <span>
-                8 min read
-              </span>
-              
-            </div>
+          
+          <h2 class="post-title">素数的判断</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-10-18</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h1 id="素数的常用判断">素数的常用判断</h1>
+          </div>
+          <div class="post-content">
+            <h1 id="素数的常用判断">素数的常用判断</h1>
 <hr>
 <h2 id="0-超级普通法">0. 超级普通法</h2>
 <p>只是利用了素数的定义<br>
@@ -282,97 +272,57 @@ int main()
 <p><a href="https://www.luogu.org/problemnew/solution/P3383">https://www.luogu.org/problemnew/solution/P3383</a></p>
 <h1 id="colorwhitecolorboxwhite关于其它方法随缘添加"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="white"><menclose mathbackground="white"><mtext>关于其它方法，随缘添加</mtext></menclose></mstyle></mrow><annotation encoding="application/x-tex">\color{white}\colorbox{white}{关于其它方法，随缘添加}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2833299999999999em;vertical-align:-0.3em;"></span><span class="mord" style="color:white;"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9833299999999998em;"><span style="top:-2.98333em;"><span class="pstrut" style="height:3.28333em;"></span><span class="stretchy colorbox" style="color:white;height:1.2833299999999999em;background-color:white;"></span></span><span style="top:-3.28333em;"><span class="pstrut" style="height:3.28333em;"></span><span class="mord boxpad" style="color:white;"><span class="mord cjk_fallback" style="color:white;">关</span><span class="mord cjk_fallback" style="color:white;">于</span><span class="mord cjk_fallback" style="color:white;">其</span><span class="mord cjk_fallback" style="color:white;">它</span><span class="mord cjk_fallback" style="color:white;">方</span><span class="mord cjk_fallback" style="color:white;">法</span><span class="mord cjk_fallback" style="color:white;">，</span><span class="mord cjk_fallback" style="color:white;">随</span><span class="mord cjk_fallback" style="color:white;">缘</span><span class="mord cjk_fallback" style="color:white;">添</span><span class="mord cjk_fallback" style="color:white;">加</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></h1>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li><a href="#%E7%B4%A0%E6%95%B0%E7%9A%84%E5%B8%B8%E7%94%A8%E5%88%A4%E6%96%AD">素数的常用判断</a>
-<ul>
-<li><a href="#0-%E8%B6%85%E7%BA%A7%E6%99%AE%E9%80%9A%E6%B3%95">0. 超级普通法</a></li>
-<li><a href="#1-%E6%A0%87%E5%87%86%E5%B8%B8%E7%94%A8%E6%B3%95">1. 标准常用法</a></li>
-<li><a href="#2-%E7%88%B1%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95">2. 爱拉托斯特尼筛法</a></li>
-<li><a href="#3-%E7%BA%BF%E6%80%A7%E7%AD%9B%E6%B3%95%E6%AC%A7%E6%8B%89%E7%AD%9B">3. 线性筛法(欧拉筛）</a></li>
-<li><a href="#4-%E5%85%B6%E5%AE%83">4. 其它</a></li>
-<li><a href="#5-miller-rabin%E7%AE%97%E6%B3%95">5. miller rabin算法</a>
-<ul>
-<li><a href="#%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA">基础理论</a></li>
-<li><a href="#%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B">具体流程</a></li>
-<li><a href="#colorredtext%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>时间复杂度</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{时间复杂度}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">时间复杂度</span></span></span></span></span></a></li>
-<li><a href="#%E6%B3%A8%E6%84%8F">注意</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81%E9%99%84%E6%B5%8B%E8%AF%95">代码（附测试）</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#colorwhitecolorboxwhite%E5%85%B3%E4%BA%8E%E5%85%B6%E5%AE%83%E6%96%B9%E6%B3%95%E9%9A%8F%E7%BC%98%E6%B7%BB%E5%8A%A0"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="white"><menclose mathbackground="white"><mtext>关于其它方法，随缘添加</mtext></menclose></mstyle></mrow><annotation encoding="application/x-tex">\color{white}\colorbox{white}{关于其它方法，随缘添加}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2833299999999999em;vertical-align:-0.3em;"></span><span class="mord" style="color:white;"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9833299999999998em;"><span style="top:-2.98333em;"><span class="pstrut" style="height:3.28333em;"></span><span class="stretchy colorbox" style="color:white;height:1.2833299999999999em;background-color:white;"></span></span><span style="top:-3.28333em;"><span class="pstrut" style="height:3.28333em;"></span><span class="mord boxpad" style="color:white;"><span class="mord cjk_fallback" style="color:white;">关</span><span class="mord cjk_fallback" style="color:white;">于</span><span class="mord cjk_fallback" style="color:white;">其</span><span class="mord cjk_fallback" style="color:white;">它</span><span class="mord cjk_fallback" style="color:white;">方</span><span class="mord cjk_fallback" style="color:white;">法</span><span class="mord cjk_fallback" style="color:white;">，</span><span class="mord cjk_fallback" style="color:white;">随</span><span class="mord cjk_fallback" style="color:white;">缘</span><span class="mord cjk_fallback" style="color:white;">添</span><span class="mord cjk_fallback" style="color:white;">加</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></a></li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://BTli-Frozen.github.io/post/hello-gridea/">
+            <a class="purple-link" href="https://BTli-Frozen.github.io/post/hello-gridea/">
               <h3 class="post-title">
-                Hello Gridea
+                下一篇：Hello Gridea
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://BTli-Frozen.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://BTli-Frozen.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>

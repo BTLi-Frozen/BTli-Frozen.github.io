@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://BTli-Frozen.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-10-18T06:18:20.532Z</updated>
+    <title>BT狸的个人博客</title>
+    <updated>2020-10-18T06:21:39.407Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://BTli-Frozen.github.io"/>
     <link rel="self" href="https://BTli-Frozen.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
     <logo>https://BTli-Frozen.github.io/images/avatar.png</logo>
     <icon>https://BTli-Frozen.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, BT狸的个人博客</rights>
     <entry>
         <title type="html"><![CDATA[素数的判断]]></title>
         <id>https://BTli-Frozen.github.io/post/su-shu-de-pan-duan/</id>
